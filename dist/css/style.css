@@ -470,14 +470,14 @@ li {
 .main-posts .crisper .post .post-title {
   margin-bottom: 10px;
   overflow: hidden;
+}
+
+.main-posts .crisper .post .post-title img {
   -webkit-transition: -webkit-transform 0.33s ease-in-out;
   transition: -webkit-transform 0.33s ease-in-out;
   -o-transition: transform 0.33s ease-in-out;
   transition: transform 0.33s ease-in-out;
   transition: transform 0.33s ease-in-out, -webkit-transform 0.33s ease-in-out;
-}
-
-.main-posts .crisper .post .post-title img {
   width: 100%;
   height: 100%;
 }
@@ -557,14 +557,14 @@ li {
 .latest-posts .crisper .section-body .post .post-title {
   margin-bottom: 10px;
   overflow: hidden;
+}
+
+.latest-posts .crisper .section-body .post .post-title img {
   -webkit-transition: -webkit-transform 0.33s ease-in-out;
   transition: -webkit-transform 0.33s ease-in-out;
   -o-transition: transform 0.33s ease-in-out;
   transition: transform 0.33s ease-in-out;
   transition: transform 0.33s ease-in-out, -webkit-transform 0.33s ease-in-out;
-}
-
-.latest-posts .crisper .section-body .post .post-title img {
   width: 100%;
   height: 100%;
 }
@@ -659,14 +659,14 @@ li {
 .featured-posts .crisper .section-body .post .post-title {
   margin-bottom: 10px;
   overflow: hidden;
+}
+
+.featured-posts .crisper .section-body .post .post-title img {
   -webkit-transition: -webkit-transform 0.33s ease-in-out;
   transition: -webkit-transform 0.33s ease-in-out;
   -o-transition: transform 0.33s ease-in-out;
   transition: transform 0.33s ease-in-out;
   transition: transform 0.33s ease-in-out, -webkit-transform 0.33s ease-in-out;
-}
-
-.featured-posts .crisper .section-body .post .post-title img {
   width: 100%;
   height: 100%;
 }
@@ -746,14 +746,14 @@ li {
 .all-latest-posts .crisper .section-body .post .post-title {
   margin-bottom: 10px;
   overflow: hidden;
+}
+
+.all-latest-posts .crisper .section-body .post .post-title img {
   -webkit-transition: -webkit-transform 0.33s ease-in-out;
   transition: -webkit-transform 0.33s ease-in-out;
   -o-transition: transform 0.33s ease-in-out;
   transition: transform 0.33s ease-in-out;
   transition: transform 0.33s ease-in-out, -webkit-transform 0.33s ease-in-out;
-}
-
-.all-latest-posts .crisper .section-body .post .post-title img {
   width: 100%;
   height: 100%;
 }
