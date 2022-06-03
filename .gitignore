@@ -1,5 +1,14 @@
 .vscode
-
 node_modules
 *.zip
 package-lock.json
+gulp
+src
+gulpfile.js
+
+gulp
+node_modules
+src
+gulpfile.js
+package-lock.json
+package.json

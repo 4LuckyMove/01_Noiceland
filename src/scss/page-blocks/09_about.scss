@@ -28,8 +28,8 @@
                     max-height: 250px;
                     margin-bottom: 10px;
                     overflow: hidden;
-                    transition: transform .33s ease-in-out;
                     img {
+                        transition: transform .33s ease-in-out;
                         width: 100%;
                         max-height: 250px;
                         object-position: center;
