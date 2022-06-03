@@ -7,23 +7,24 @@
                 padding-bottom: 20px;
                 border-bottom: 1px solid #4d4d4d;
                 display: flex;
-                align-items: flex-end;
+                flex-direction: column;
                 text-transform: uppercase;
                 .footer-logotype {
-                font-size: 16px;
-                line-height: calc(12 / 10 * 100%);
-                font-weight: 900;
-                color: $white;
-                margin-right: 10px;
-                &:hover {
-                    color: $grey;
-                }
+                    margin-bottom: 10px;
+                    font-size: 16px;
+                    line-height: calc(12 / 10 * 100%);
+                    font-weight: 900;
+                    color: $white;
+                    margin-right: 10px;
+                    &:hover {
+                        color: $grey;
+                    }
                 }
                 .all-rights-reserved {
-                font-size: 6px;
-                line-height: calc(12 / 10 * 100%);
-                letter-spacing: 1px;
-                color: $grey;
+                    font-size: 10px;
+                    line-height: calc(12 / 10 * 100%);
+                    letter-spacing: 1px;
+                    color: $grey;
                 }
             }
             .footer-nav-panel {
@@ -113,12 +114,12 @@
         .body-footer {
             .crisper {
                 .footer-title {
+                    flex-direction: row;
+                    align-items: flex-end;
                     .footer-logotype {
+                        margin-bottom: 0;
                         font-size: 17px;
                         margin-right: 15px;
-                    }
-                    .all-rights-reserved {
-                    font-size: 10px;
                     }
                 }
                 .footer-nav-panel {

@@ -228,13 +228,15 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-transform: uppercase;
 }
 
 .footer .body-footer .crisper .footer-title .footer-logotype {
+  margin-bottom: 10px;
   font-size: 16px;
   line-height: 120%;
   font-weight: 900;
@@ -247,7 +249,7 @@ li {
 }
 
 .footer .body-footer .crisper .footer-title .all-rights-reserved {
-  font-size: 6px;
+  font-size: 10px;
   line-height: 120%;
   letter-spacing: 1px;
   color: #666666;
@@ -1001,13 +1003,20 @@ li {
 
   /* CSS для ширины от 576px до 767px */
 
-  .footer .body-footer .crisper .footer-title .footer-logotype {
-    font-size: 17px;
-    margin-right: 15px;
+  .footer .body-footer .crisper .footer-title {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 
-  .footer .body-footer .crisper .footer-title .all-rights-reserved {
-    font-size: 10px;
+  .footer .body-footer .crisper .footer-title .footer-logotype {
+    margin-bottom: 0;
+    font-size: 17px;
+    margin-right: 15px;
   }
 
   .footer .body-footer .crisper .footer-nav-panel .top-menu {
