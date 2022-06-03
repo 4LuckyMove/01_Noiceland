@@ -1,0 +1,77 @@
+// @import "fonts";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&family=Tenor+Sans&display=swap');
+
+// Main Color
+$white: #fff;
+$black:#000;
+$light-grey:#999999;
+$grey:#666666;
+$dark-white:#e6e6e6;
+
+// Reset
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Libre Franklin', sans-serif;
+	font-size: 14px;
+    line-height: calc(24 / 14 * 100%);
+	color: $black;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-size: 1rem;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+a {
+    text-decoration: none;
+	color: $black;
+}
+
+ul,
+ol,
+li {
+    list-style-type: none;
+}
+
+.wrapper {
+	min-height: 100%;
+	// max-width: 1440px;
+    margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	flex: 1 1 auto;
+}
+
+.crisper {
+    max-width: 1200px;
+	margin: 0 auto;
+}
+
+@import "page-blocks/**.scss";

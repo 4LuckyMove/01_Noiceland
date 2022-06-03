@@ -1,0 +1,1359 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&family=Tenor+Sans&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 14px;
+  line-height: 171.4285714286%;
+  color: #000;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 1rem;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.crisper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  border-bottom: 1px solid #e6e6e6;
+}
+.header .body-header .crisper .body-nav-desktop {
+  padding-right: 10px;
+  padding-left: 10px;
+  position: relative;
+  overflow: hidden;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .body-header .crisper .body-nav-desktop .nav-logotype {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.header .body-header .crisper .body-nav-desktop .nav-logotype:hover {
+  color: #666666;
+}
+.header .body-header .crisper .body-nav-desktop .nav-panel-desktop {
+  display: none;
+}
+.header .body-header .crisper .body-nav-desktop .nav-panel-desktop .nav-panel-items {
+  display: flex;
+}
+.header .body-header .crisper .body-nav-desktop .nav-panel-desktop .nav-panel-items .nav-panel-item:hover .nav-panel-link {
+  border-bottom: 1px solid #000;
+}
+.header .body-header .crisper .body-nav-desktop .nav-panel-desktop .nav-panel-items .nav-panel-item:not(:last-child) {
+  margin-right: 40px;
+}
+.header .body-header .crisper .body-nav-desktop .nav-panel-desktop .nav-panel-items .nav-panel-item .nav-panel-link {
+  display: block;
+}
+.header .body-header .crisper .body-nav-desktop .nav-panel-mobile-btn {
+  display: block;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+}
+.header .body-header .crisper .body-nav-desktop .nav-panel-mobile-btn span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  transition: all 0.5s;
+}
+.header .body-header .crisper .body-nav-desktop .nav-panel-mobile-btn span:nth-of-type(2) {
+  top: calc(50% - 8px);
+}
+.header .body-header .crisper .body-nav-desktop .nav-panel-mobile-btn span:nth-of-type(3) {
+  top: calc(50% + 8px);
+}
+.header .body-header .crisper .body-nav-desktop .nav-panel-mobile-btn.active span:nth-of-type(1) {
+  display: none;
+}
+.header .body-header .crisper .body-nav-desktop .nav-panel-mobile-btn.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+.header .body-header .crisper .body-nav-desktop .nav-panel-mobile-btn.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}
+.header .body-header .crisper .nav-panel-mobile {
+  display: none;
+  width: 100%;
+  height: max-content;
+  transition: top 0.5s ease 0s;
+  overflow: auto;
+  text-align: center;
+}
+.header .body-header .crisper .nav-panel-mobile .nav-panel-items .nav-panel-item:hover .nav-panel-link {
+  background-color: #666666;
+  color: #e6e6e6;
+}
+.header .body-header .crisper .nav-panel-mobile .nav-panel-items .nav-panel-item .nav-panel-link {
+  padding: 10px;
+  display: block;
+}
+.header .body-header .crisper .nav-panel-mobile.active {
+  display: block;
+}
+
+/* sm-размер (>=576px) */
+@media (min-width: 576px) {
+  /* CSS для ширины от 576px до 767px */
+  .header .body-header .crisper .body-nav-desktop {
+    height: 50px;
+  }
+  .header .body-header .crisper .body-nav-desktop .nav-logotype {
+    font-size: 17px;
+  }
+  .header .body-header .crisper .body-nav-desktop .nav-panel-desktop {
+    display: none;
+  }
+  .header .body-header .crisper .nav-panel-mobile .nav-panel-items .nav-panel-item .nav-panel-link {
+    padding: 15px 10px;
+    display: block;
+  }
+}
+/* md-размер (>=768px) */
+@media (min-width: 768px) {
+  /* CSS для ширины от 768px до 991px */
+  .header .body-header .crisper .body-nav-desktop {
+    height: 70px;
+  }
+  .header .body-header .crisper .body-nav-desktop .nav-panel-desktop {
+    display: block;
+  }
+  .header .body-header .crisper .body-nav-desktop .nav-panel-mobile-btn {
+    display: none;
+  }
+  .header .body-header .crisper .nav-panel-mobile {
+    display: none;
+  }
+  .header .body-header .crisper .nav-panel-mobile .nav-panel-items .nav-panel-item .nav-panel-link {
+    padding: 15px 10px;
+    display: block;
+  }
+  .header .body-header .crisper .nav-panel-mobile.active {
+    display: none;
+  }
+}
+/* lg-размер (>=992px) */
+@media (min-width: 992px) {
+  /* CSS для ширины от 992px до 1199px */
+  .header .body-header .crisper .body-nav-desktop {
+    height: 90px;
+  }
+}
+/* xl-размер (>=1200px) */
+@media (min-width: 1220px) {
+  /* CSS для ширины от 1200px до 1399px */
+  .header .body-header .crisper .body-nav-desktop {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.footer {
+  background-color: #141414;
+}
+.footer .body-footer {
+  padding: 30px 10px;
+}
+.footer .body-footer .crisper .footer-title {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #4d4d4d;
+  display: flex;
+  align-items: flex-end;
+  text-transform: uppercase;
+}
+.footer .body-footer .crisper .footer-title .footer-logotype {
+  font-size: 16px;
+  line-height: 120%;
+  font-weight: 900;
+  color: #fff;
+  margin-right: 10px;
+}
+.footer .body-footer .crisper .footer-title .footer-logotype:hover {
+  color: #666666;
+}
+.footer .body-footer .crisper .footer-title .all-rights-reserved {
+  font-size: 6px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  color: #666666;
+}
+.footer .body-footer .crisper .footer-nav-panel {
+  padding-top: 20px;
+}
+.footer .body-footer .crisper .footer-nav-panel .item {
+  margin-bottom: 10px;
+}
+.footer .body-footer .crisper .footer-nav-panel .item .item-title {
+  margin-bottom: 10px;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #666666;
+}
+.footer .body-footer .crisper .footer-nav-panel .item .item-body .item-link {
+  color: #fff;
+}
+.footer .body-footer .crisper .footer-nav-panel .item .item-body .item-link:hover {
+  color: #666666;
+}
+.footer .body-footer .crisper .footer-nav-panel .item .item-body .item-link:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer .body-footer .crisper .footer-nav-panel .top-menu {
+  margin-bottom: 15px;
+}
+.footer .body-footer .crisper .footer-nav-panel .top-menu .item .item-subsctibe .input-group-footer {
+  display: flex;
+}
+.footer .body-footer .crisper .footer-nav-panel .top-menu .item .item-subsctibe .input-group-footer .form-conrol {
+  padding: 12px 16px;
+  color: #666666;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  background-color: #fff;
+  border: 0;
+  box-sizing: border-box;
+}
+.footer .body-footer .crisper .footer-nav-panel .top-menu .item .item-subsctibe .input-group-footer .form-conrol:focus {
+  outline: #cccccc;
+}
+.footer .body-footer .crisper .footer-nav-panel .top-menu .item .item-subsctibe .input-group-footer .form-conrol::placeholder {
+  text-transform: uppercase;
+}
+.footer .body-footer .crisper .footer-nav-panel .top-menu .item .item-subsctibe .input-group-footer .footer-sumbit-btn {
+  padding: 12px 16px;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #000;
+  border: 0;
+  cursor: pointer;
+}
+.footer .body-footer .crisper .footer-nav-panel .top-menu .item .item-subsctibe .input-group-footer .footer-sumbit-btn:hover {
+  background-color: #666666;
+}
+.footer .body-footer .crisper .footer-nav-panel .top-menu .item .item-categories {
+  display: flex;
+  flex-direction: column;
+}
+.footer .body-footer .crisper .footer-nav-panel .bottom-menu .item .item-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* sm-размер (>=576px) */
+@media (min-width: 576px) {
+  /* CSS для ширины от 576px до 767px */
+  .footer .body-footer .crisper .footer-title .footer-logotype {
+    font-size: 17px;
+    margin-right: 15px;
+  }
+  .footer .body-footer .crisper .footer-title .all-rights-reserved {
+    font-size: 10px;
+  }
+  .footer .body-footer .crisper .footer-nav-panel .top-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer .body-footer .crisper .footer-nav-panel .top-menu .item .item-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+  }
+  .footer .body-footer .crisper .footer-nav-panel .bottom-menu {
+    min-width: max-content;
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    column-gap: 10px;
+  }
+}
+/* md-размер (>=768px) */
+@media (min-width: 768px) {
+  /* CSS для ширины от 768px до 991px */
+  .footer .body-footer {
+    padding: 60px 10px;
+  }
+  .footer .body-footer .crisper .footer-title {
+    padding-bottom: 40px;
+  }
+  .footer .body-footer .crisper .footer-nav-panel {
+    padding-top: 40px;
+  }
+  .footer .body-footer .crisper .footer-nav-panel .item .item-title {
+    margin-bottom: 20px;
+  }
+  .footer .body-footer .crisper .footer-nav-panel .item .item-body .item-link:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .footer .body-footer .crisper .footer-nav-panel .top-menu {
+    margin-bottom: 25px;
+  }
+  .footer .body-footer .crisper .footer-nav-panel .top-menu .item .item-subsctibe .input-group-footer {
+    display: flex;
+  }
+  .footer .body-footer .crisper .footer-nav-panel .top-menu .item .item-subsctibe .input-group-footer .form-conrol {
+    padding: 18px 24px;
+  }
+  .footer .body-footer .crisper .footer-nav-panel .top-menu .item .item-subsctibe .input-group-footer .footer-sumbit-btn {
+    padding: 18px 24px;
+  }
+  .footer .body-footer .crisper .footer-nav-panel .top-menu .item .item-categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer .body-footer .crisper .footer-nav-panel .bottom-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 20%);
+    column-gap: 15px;
+  }
+}
+/* lg-размер (>=992px) */
+@media (min-width: 992px) {
+  /* CSS для ширины от 992px до 1199px */
+  .footer .body-footer .crisper .footer-nav-panel .top-menu .item .item-categories {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .footer .body-footer .crisper .footer-nav-panel .bottom-menu {
+    grid-template-columns: repeat(3, 17%);
+    column-gap: 0px;
+  }
+}
+/* xl-размер (>=1200px) */
+@media (min-width: 1220px) {
+  /* CSS для ширины от 1200px до 1399px */
+  .footer .body-footer {
+    padding: 90px 0px;
+  }
+  .footer .body-footer .crisper .footer-title {
+    padding-bottom: 60px;
+  }
+  .footer .body-footer .crisper .footer-nav-panel {
+    padding-top: 60px;
+  }
+  .footer .body-footer .crisper .footer-nav-panel .top-menu {
+    margin-bottom: 40px;
+  }
+  .footer .body-footer .crisper .footer-nav-panel .bottom-menu {
+    grid-template-columns: repeat(3, 13%);
+    column-gap: 10px;
+  }
+}
+.big-post {
+  padding-top: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.big-post .crisper .card {
+  max-width: max-content;
+  height: max-content;
+}
+.big-post .crisper .card .card-title {
+  margin-bottom: 6px;
+}
+.big-post .crisper .card .card-title img {
+  width: 100%;
+  height: 100%;
+}
+.big-post .crisper .card .card-body .category {
+  margin-bottom: 6px;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999999;
+}
+.big-post .crisper .card .card-body .title {
+  margin-bottom: 9px;
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 18px;
+  line-height: 116.6666666667%;
+  text-transform: uppercase;
+}
+.big-post .crisper .card .card-body .description {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 150%;
+  color: #666666;
+}
+.big-post .crisper .card .card-body .author {
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* sm-размер (>=576px) */
+@media (min-width: 576px) {
+  /* CSS для ширины от 576px до 767px */
+  .big-post .crisper .card .card-title {
+    margin-bottom: 12px;
+  }
+  .big-post .crisper .card .card-body .category {
+    margin-bottom: 12px;
+  }
+  .big-post .crisper .card .card-body .title {
+    margin-bottom: 18px;
+    font-size: 24px;
+  }
+  .big-post .crisper .card .card-body .description {
+    margin-bottom: 18px;
+    font-size: 16px;
+  }
+}
+/* md-размер (>=768px) */
+@media (min-width: 768px) {
+  /* CSS для ширины от 768px до 991px */
+  .big-post {
+    padding-top: 45px;
+  }
+  .big-post .crisper .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
+  .big-post .crisper .card .card-title {
+    margin-bottom: 0;
+  }
+  .big-post .crisper .card .card-body .title {
+    font-size: 30px;
+  }
+}
+/* lg-размер (>=992px) */
+@media (min-width: 992px) {
+  /* CSS для ширины от 992px до 1199px */
+  .big-post .crisper .card {
+    column-gap: 40px;
+  }
+  .big-post .crisper .card .card-body .category {
+    margin-bottom: 18px;
+  }
+  .big-post .crisper .card .card-body .title {
+    margin-bottom: 27px;
+    font-size: 36px;
+  }
+  .big-post .crisper .card .card-body .description {
+    margin-bottom: 28px;
+  }
+}
+/* xl-размер (>=1200px) */
+@media (min-width: 1220px) {
+  /* CSS для ширины от 1200px до 1399px */
+  .big-post {
+    padding-top: 65px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .big-post .crisper .card {
+    column-gap: 51px;
+  }
+}
+.main-posts {
+  margin-top: 12px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.main-posts .crisper {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.main-posts .crisper .post {
+  margin-bottom: 15px;
+  min-height: 390px;
+}
+.main-posts .crisper .post:hover img {
+  background-color: #e6e6e6;
+  height: 100%;
+  transform: scale(1.1);
+  transition: transform 0.33s ease-in-out;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.main-posts .crisper .post .post-title {
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: transform 0.33s ease-in-out;
+}
+.main-posts .crisper .post .post-title img {
+  width: 100%;
+  height: 100%;
+}
+.main-posts .crisper .post .post-body .category {
+  margin-bottom: 8px;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999999;
+}
+.main-posts .crisper .post .post-body .title {
+  margin-bottom: 8px;
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.main-posts .crisper .post .post-body .author {
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* sm-размер (>=576px) */
+@media (min-width: 576px) {
+  /* CSS для ширины от 576px до 767px */
+  .main-posts .crisper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .main-posts .crisper .post {
+    min-height: 410px;
+  }
+  .main-posts .crisper .post .post-title {
+    margin-bottom: 12px;
+  }
+  .main-posts .crisper .post .post-body .category {
+    margin-bottom: 12px;
+  }
+  .main-posts .crisper .post .post-body .title {
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+}
+/* md-размер (>=768px) */
+@media (min-width: 768px) {
+  /* CSS для ширины от 768px до 991px */
+  .main-posts {
+    margin-top: 30px;
+  }
+  .main-posts .crisper {
+    margin-bottom: 20px;
+    padding-bottom: 35px;
+    gap: 20px;
+  }
+  .main-posts .crisper .post {
+    min-height: 460px;
+  }
+  .main-posts .crisper .post .post-title {
+    margin-bottom: 15px;
+  }
+}
+/* lg-размер (>=992px) */
+@media (min-width: 992px) {
+  /* CSS для ширины от 992px до 1199px */
+  .main-posts {
+    margin-top: 60px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .main-posts .crisper {
+    margin-bottom: 20px;
+    padding-bottom: 65px;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 25px;
+  }
+  .main-posts .crisper .post {
+    min-height: 430px;
+  }
+  .main-posts .crisper .post .post-title {
+    margin-bottom: 20px;
+  }
+  .main-posts .crisper .post .post-body .category {
+    margin-bottom: 18px;
+  }
+  .main-posts .crisper .post .post-body .title {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+}
+/* xl-размер (>=1200px) */
+@media (min-width: 1220px) {
+  /* CSS для ширины от 1200px до 1399px */
+  .main-posts {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .main-posts .crisper .post {
+    min-height: 450px;
+  }
+}
+.latest-posts {
+  margin-top: 12px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.latest-posts .crisper {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.latest-posts .crisper .section-title {
+  margin-bottom: 12px;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999999;
+}
+.latest-posts .crisper .section-body .post {
+  margin-bottom: 15px;
+}
+.latest-posts .crisper .section-body .post:hover img {
+  background-color: #e6e6e6;
+  height: 100%;
+  transform: scale(1.1);
+  transition: transform 0.33s ease-in-out;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.latest-posts .crisper .section-body .post .post-title {
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: transform 0.33s ease-in-out;
+}
+.latest-posts .crisper .section-body .post .post-title img {
+  width: 100%;
+  height: 100%;
+}
+.latest-posts .crisper .section-body .post .post-body .category {
+  margin-bottom: 8px;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999999;
+}
+.latest-posts .crisper .section-body .post .post-body .title {
+  margin-bottom: 8px;
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.latest-posts .crisper .section-body .post .post-body .author {
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.latest-posts .crisper .section-button {
+  margin-top: 40px;
+  text-align: center;
+}
+.latest-posts .crisper .section-button a {
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid #000;
+  padding: 7px 12px;
+}
+.latest-posts .crisper .section-button a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* sm-размер (>=576px) */
+@media (min-width: 576px) {
+  /* CSS для ширины от 576px до 767px */
+  .latest-posts {
+    margin-top: 15px;
+  }
+  .latest-posts .crisper {
+    padding-bottom: 45px;
+  }
+  .latest-posts .crisper .section-title {
+    margin-bottom: 15px;
+  }
+  .latest-posts .crisper .section-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .latest-posts .crisper .section-body .post {
+    margin-bottom: 0px;
+  }
+  .latest-posts .crisper .section-body .post .post-title {
+    margin-bottom: 12px;
+  }
+  .latest-posts .crisper .section-body .post .post-body .category {
+    margin-bottom: 12px;
+  }
+  .latest-posts .crisper .section-body .post .post-body .title {
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+  .latest-posts .crisper .section-button a {
+    padding: 14px 19px;
+  }
+}
+/* md-размер (>=768px) */
+@media (min-width: 768px) {
+  /* CSS для ширины от 768px до 991px */
+  .latest-posts {
+    margin-top: 45px;
+  }
+  .latest-posts .crisper .section-title {
+    margin-bottom: 30px;
+  }
+  .latest-posts .crisper .section-body {
+    gap: 20px;
+  }
+  .latest-posts .crisper .section-body .post .post-title {
+    margin-bottom: 20px;
+  }
+  .latest-posts .crisper .section-body .post .post-body .category {
+    margin-bottom: 18px;
+  }
+  .latest-posts .crisper .section-body .post .post-body .title {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  .latest-posts .crisper .section-button {
+    margin-top: 50px;
+  }
+  .latest-posts .crisper .section-button a {
+    padding: 21px 26px;
+  }
+}
+/* lg-размер (>=992px) */
+@media (min-width: 992px) {
+  /* CSS для ширины от 992px до 1199px */
+  .latest-posts {
+    margin-top: 75px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .latest-posts .crisper {
+    padding-bottom: 75px;
+  }
+  .latest-posts .crisper .section-body {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+  }
+  .latest-posts .crisper .section-button {
+    margin-top: 70px;
+  }
+}
+/* xl-размер (>=1200px) */
+@media (min-width: 1220px) {
+  /* CSS для ширины от 1200px до 1399px */
+  .latest-posts {
+    margin-top: 90px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .latest-posts .crisper {
+    padding-bottom: 90px;
+  }
+  .latest-posts .crisper .section-body {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .latest-posts .crisper .section-button {
+    margin-top: 90px;
+  }
+}
+.featured-posts {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.featured-posts .crisper .section-title {
+  margin-bottom: 12px;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999999;
+}
+.featured-posts .crisper .section-body .post {
+  margin-bottom: 15px;
+}
+.featured-posts .crisper .section-body .post:hover img {
+  background-color: #e6e6e6;
+  height: 100%;
+  transform: scale(1.1);
+  transition: transform 0.33s ease-in-out;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.featured-posts .crisper .section-body .post .post-title {
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: transform 0.33s ease-in-out;
+}
+.featured-posts .crisper .section-body .post .post-title img {
+  width: 100%;
+  height: 100%;
+}
+.featured-posts .crisper .section-body .post .post-body .category {
+  margin-bottom: 8px;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999999;
+}
+.featured-posts .crisper .section-body .post .post-body .title {
+  margin-bottom: 8px;
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.featured-posts .crisper .section-body .post .post-body .author {
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* sm-размер (>=576px) */
+@media (min-width: 576px) {
+  /* CSS для ширины от 576px до 767px */
+  .featured-posts {
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+  .featured-posts .crisper .section-title {
+    margin-bottom: 15px;
+  }
+  .featured-posts .crisper .section-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .featured-posts .crisper .section-body .post {
+    margin-bottom: 0px;
+  }
+  .featured-posts .crisper .section-body .post .post-title {
+    margin-bottom: 12px;
+  }
+  .featured-posts .crisper .section-body .post .post-body .category {
+    margin-bottom: 12px;
+  }
+  .featured-posts .crisper .section-body .post .post-body .title {
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+}
+/* md-размер (>=768px) */
+@media (min-width: 768px) {
+  /* CSS для ширины от 768px до 991px */
+  .featured-posts {
+    padding-top: 45px;
+    padding-bottom: 65px;
+  }
+  .featured-posts .crisper .section-title {
+    margin-bottom: 30px;
+  }
+  .featured-posts .crisper .section-body {
+    gap: 20px;
+  }
+  .featured-posts .crisper .section-body .post .post-title {
+    margin-bottom: 20px;
+  }
+  .featured-posts .crisper .section-body .post .post-body .category {
+    margin-bottom: 18px;
+  }
+  .featured-posts .crisper .section-body .post .post-body .title {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+}
+/* lg-размер (>=992px) */
+@media (min-width: 992px) {
+  /* CSS для ширины от 992px до 1199px */
+  .featured-posts {
+    padding-top: 75px;
+    padding-bottom: 90px;
+  }
+  .featured-posts .crisper .section-body {
+    row-gap: 25px;
+  }
+}
+/* xl-размер (>=1200px) */
+@media (min-width: 1220px) {
+  /* CSS для ширины от 1200px до 1399px */
+  .featured-posts {
+    padding-top: 90px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+.all-latest-posts {
+  margin-top: 12px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.all-latest-posts .crisper {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.all-latest-posts .crisper .section-title {
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999999;
+}
+.all-latest-posts .crisper .section-body .post {
+  margin-bottom: 15px;
+}
+.all-latest-posts .crisper .section-body .post:hover img {
+  background-color: #e6e6e6;
+  height: 100%;
+  transform: scale(1.1);
+  transition: transform 0.33s ease-in-out;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.all-latest-posts .crisper .section-body .post .post-title {
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: transform 0.33s ease-in-out;
+}
+.all-latest-posts .crisper .section-body .post .post-title img {
+  width: 100%;
+  height: 100%;
+}
+.all-latest-posts .crisper .section-body .post .post-body .category {
+  margin-bottom: 8px;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999999;
+}
+.all-latest-posts .crisper .section-body .post .post-body .title {
+  margin-bottom: 8px;
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.all-latest-posts .crisper .section-body .post .post-body .author {
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* sm-размер (>=576px) */
+@media (min-width: 576px) {
+  /* CSS для ширины от 576px до 767px */
+  .all-latest-posts {
+    margin-top: 15px;
+  }
+  .all-latest-posts .crisper {
+    padding-bottom: 45px;
+  }
+  .all-latest-posts .crisper .section-title {
+    margin-bottom: 15px;
+  }
+  .all-latest-posts .crisper .section-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .all-latest-posts .crisper .section-body .post {
+    margin-bottom: 0px;
+  }
+  .all-latest-posts .crisper .section-body .post .post-title {
+    margin-bottom: 12px;
+  }
+  .all-latest-posts .crisper .section-body .post .post-body .category {
+    margin-bottom: 12px;
+  }
+  .all-latest-posts .crisper .section-body .post .post-body .title {
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+}
+/* md-размер (>=768px) */
+@media (min-width: 768px) {
+  /* CSS для ширины от 768px до 991px */
+  .all-latest-posts {
+    margin-top: 30px;
+  }
+  .all-latest-posts .crisper .section-title {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .all-latest-posts .crisper .section-body {
+    gap: 20px;
+  }
+  .all-latest-posts .crisper .section-body .post .post-title {
+    margin-bottom: 20px;
+  }
+  .all-latest-posts .crisper .section-body .post .post-body .category {
+    margin-bottom: 18px;
+  }
+  .all-latest-posts .crisper .section-body .post .post-body .title {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+}
+/* lg-размер (>=992px) */
+@media (min-width: 992px) {
+  /* CSS для ширины от 992px до 1199px */
+  .all-latest-posts .crisper {
+    padding-bottom: 75px;
+  }
+  .all-latest-posts .crisper .section-body {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+  }
+}
+/* xl-размер (>=1200px) */
+@media (min-width: 1220px) {
+  /* CSS для ширины от 1200px до 1399px */
+  .all-latest-posts {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+.detail-post {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.detail-post .crisper .breadcrums {
+  margin-bottom: 20px;
+}
+.detail-post .crisper .breadcrums .breadcrums-items {
+  display: flex;
+  align-items: center;
+}
+.detail-post .crisper .breadcrums .breadcrums-items > *:not(:last-child) {
+  margin-right: 10px;
+}
+.detail-post .crisper .breadcrums .breadcrums-items .breadcrums-item .breadcrums-link {
+  color: #000;
+}
+.detail-post .crisper .breadcrums .breadcrums-items .breadcrums-item .breadcrums-link:hover {
+  color: #000;
+}
+.detail-post .crisper .breadcrums .breadcrums-items .breadcrums-item.active {
+  color: #999999;
+}
+.detail-post .crisper .card {
+  max-width: max-content;
+  height: max-content;
+}
+.detail-post .crisper .card .card-title {
+  margin-bottom: 6px;
+}
+.detail-post .crisper .card .card-title img {
+  width: 100%;
+  height: 100%;
+}
+.detail-post .crisper .card .card-body .category {
+  margin-bottom: 6px;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999999;
+}
+.detail-post .crisper .card .card-body .title {
+  margin-bottom: 9px;
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 18px;
+  line-height: 116.6666666667%;
+  text-transform: uppercase;
+}
+.detail-post .crisper .card .card-body .description {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 150%;
+  color: #666666;
+}
+.detail-post .crisper .card .card-body .author {
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* sm-размер (>=576px) */
+@media (min-width: 576px) {
+  /* CSS для ширины от 576px до 767px */
+  .detail-post .crisper .card .card-title {
+    margin-bottom: 12px;
+  }
+  .detail-post .crisper .card .card-body .category {
+    margin-bottom: 12px;
+  }
+  .detail-post .crisper .card .card-body .title {
+    margin-bottom: 18px;
+    font-size: 24px;
+  }
+  .detail-post .crisper .card .card-body .description {
+    margin-bottom: 18px;
+    font-size: 16px;
+  }
+}
+/* md-размер (>=768px) */
+@media (min-width: 768px) {
+  /* CSS для ширины от 768px до 991px */
+  .detail-post {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .detail-post .crisper .breadcrums {
+    margin-bottom: 30px;
+  }
+  .detail-post .crisper .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
+  .detail-post .crisper .card .card-title {
+    margin-bottom: 0;
+  }
+  .detail-post .crisper .card .card-body .title {
+    font-size: 30px;
+  }
+}
+/* lg-размер (>=992px) */
+@media (min-width: 992px) {
+  /* CSS для ширины от 992px до 1199px */
+  .detail-post .crisper .card {
+    column-gap: 40px;
+  }
+  .detail-post .crisper .card .card-body .category {
+    margin-bottom: 18px;
+  }
+  .detail-post .crisper .card .card-body .title {
+    margin-bottom: 27px;
+    font-size: 36px;
+  }
+  .detail-post .crisper .card .card-body .description {
+    margin-bottom: 28px;
+  }
+}
+/* xl-размер (>=1200px) */
+@media (min-width: 1220px) {
+  /* CSS для ширины от 1200px до 1399px */
+  .detail-post {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .detail-post .crisper .card {
+    column-gap: 51px;
+  }
+}
+.about {
+  margin-top: 12px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.about .crisper {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.about .crisper .section-title {
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999999;
+}
+.about .crisper .section-body .post {
+  margin-bottom: 15px;
+}
+.about .crisper .section-body .post:hover img {
+  background-color: #e6e6e6;
+  height: 100%;
+  transform: scale(1.1);
+  transition: transform 0.33s ease-in-out;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.about .crisper .section-body .post .post-title {
+  max-height: 250px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: transform 0.33s ease-in-out;
+}
+.about .crisper .section-body .post .post-title img {
+  width: 100%;
+  max-height: 250px;
+  object-position: center;
+  object-fit: cover;
+}
+.about .crisper .section-body .post .post-body {
+  text-align: center;
+}
+.about .crisper .section-body .post .post-body .category {
+  margin-bottom: 8px;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999999;
+}
+.about .crisper .section-body .post .post-body .title {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 120%;
+}
+.about .crisper .section-body .post .post-body .author {
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* sm-размер (>=576px) */
+@media (min-width: 576px) {
+  /* CSS для ширины от 576px до 767px */
+  .about {
+    margin-top: 15px;
+  }
+  .about .crisper {
+    padding-bottom: 45px;
+  }
+  .about .crisper .section-title {
+    margin-bottom: 15px;
+  }
+  .about .crisper .section-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .about .crisper .section-body .post {
+    margin-bottom: 0px;
+  }
+  .about .crisper .section-body .post .post-title {
+    margin-bottom: 12px;
+  }
+  .about .crisper .section-body .post .post-body .category {
+    margin-bottom: 12px;
+  }
+  .about .crisper .section-body .post .post-body .title {
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+}
+/* md-размер (>=768px) */
+@media (min-width: 768px) {
+  /* CSS для ширины от 768px до 991px */
+  .about {
+    margin-top: 30px;
+  }
+  .about .crisper .section-title {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .about .crisper .section-body {
+    gap: 20px;
+  }
+  .about .crisper .section-body .post .post-title {
+    margin-bottom: 20px;
+  }
+  .about .crisper .section-body .post .post-body .category {
+    margin-bottom: 18px;
+  }
+  .about .crisper .section-body .post .post-body .title {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+}
+/* lg-размер (>=992px) */
+@media (min-width: 992px) {
+  /* CSS для ширины от 992px до 1199px */
+  .about .crisper {
+    padding-bottom: 75px;
+  }
+  .about .crisper .section-body {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+  }
+}
+/* xl-размер (>=1200px) */
+@media (min-width: 1220px) {
+  /* CSS для ширины от 1200px до 1399px */
+  .about {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}

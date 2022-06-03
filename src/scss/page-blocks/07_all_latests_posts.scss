@@ -1,0 +1,147 @@
+.all-latest-posts {
+    margin-top: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
+    .crisper {
+        padding-bottom: 20px;
+        border-bottom: 1px solid $dark-white;
+        .section-title {
+            margin-bottom: 12px;
+            font-size: 18px;
+            line-height: calc(24 / 20 * 100%);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $light-grey;
+        }
+        .section-body {
+            .post {
+                margin-bottom: 15px;
+                &:hover img {
+                    background-color: $dark-white;
+                    height: 100%;
+                    transform: scale(1.1);
+                    transition: transform .33s ease-in-out;
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
+                .post-title {
+                    margin-bottom: 10px;
+                    overflow: hidden;
+                    transition: transform .33s ease-in-out;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .post-body {
+                    .category {
+                        margin-bottom: 8px;
+                        font-size: 10px;
+                        line-height: calc(12 / 10 * 100%);
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        color: $light-grey;
+                    }
+                    .title {
+                        margin-bottom: 8px;
+                        font-family: 'Tenor Sans', sans-serif;
+                        font-size: 16px;
+                        line-height: calc(24 / 20 * 100%);
+                        text-transform: uppercase;
+                    }
+                    .author {
+                        font-size: 10px;
+                        line-height: calc(12 / 10 * 100%);
+                        letter-spacing: 1px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
+/* sm-размер (>=576px) */
+@media (min-width: 576px) {
+    /* CSS для ширины от 576px до 767px */
+    .all-latest-posts {
+        margin-top: 15px;
+        .crisper {
+            padding-bottom: 45px;
+            .section-title {
+                margin-bottom: 15px;
+            }
+            .section-body {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                .post {
+                    margin-bottom: 0px;
+                    .post-title {
+                        margin-bottom: 12px;
+                    }
+                    .post-body {
+                        .category {
+                            margin-bottom: 12px;
+                        }
+                        .title {
+                            margin-bottom: 12px;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* md-размер (>=768px) */
+@media (min-width: 768px) {
+    /* CSS для ширины от 768px до 991px */
+    .all-latest-posts {
+        margin-top: 30px;
+        .crisper {
+            .section-title {
+                margin-bottom: 30px;
+                font-size: 20px;
+            }
+            .section-body {
+                gap: 20px;
+                .post {
+                    .post-title {
+                        margin-bottom: 20px;
+                    }
+                    .post-body {
+                        .category {
+                            margin-bottom: 18px;
+                        }
+                        .title {
+                            margin-bottom: 15px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* lg-размер (>=992px) */
+@media (min-width: 992px) {
+    /* CSS для ширины от 992px до 1199px */
+    .all-latest-posts {
+        .crisper {
+            padding-bottom: 75px;
+            .section-body {
+                grid-template-columns: repeat(3, 1fr);
+                row-gap: 50px;
+            }
+        }
+    }
+}
+/* xl-размер (>=1200px) */
+@media (min-width: 1220px) {
+    /* CSS для ширины от 1200px до 1399px */
+    .all-latest-posts {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
